@@ -19,9 +19,9 @@ class ProductRepository @Inject constructor(private val fakerAPI: FakerAPI) {
         pagingSourceFactory = {QuotePagingSource(fakerAPI)}
     ).liveData
 //
-    private val _products = MutableLiveData<List<Product>>()
-    val products : LiveData<List<Product>>
-    get() = _products
+//    private val _products = MutableLiveData<List<Product>>()
+//    val products : LiveData<List<Product>>
+//    get() = _products
 //
 ////    private val _products = MutableLiveData<UnitResponse>()
 ////    val products : LiveData<UnitResponse>
