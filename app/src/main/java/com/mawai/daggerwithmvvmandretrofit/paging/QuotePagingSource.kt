@@ -35,17 +35,17 @@ class QuotePagingSource(private val quoteAPI: FakerAPI) : PagingSource<Int, Resu
                 ?:state.closestPageToPosition(it)?.nextKey?.minus(1)
         }
 
-        if(state.anchorPosition != null){
-            val anchorPage = state.closestPageToPosition(state.anchorPosition!!)
-            if(anchorPage?.prevKey != null) {
-                return anchorPage.prevKey!!.plus(1)
-            }
-            else if(anchorPage?.nextKey != null){
-                return anchorPage.nextKey!!.minus(1)
-            }
-        }
-        else{
-            return null
-        }
+//        if(state.anchorPosition != null){
+//            val anchorPage = state.closestPageToPosition(state.anchorPosition!!)
+//            if(anchorPage?.prevKey != null) {
+//                return anchorPage.prevKey!!.plus(1)
+//            }
+//            else if(anchorPage?.nextKey != null){
+//                return anchorPage.nextKey!!.minus(1)
+//            }
+//        }
+//        else{
+//            return null
+//        }
     }
 }
